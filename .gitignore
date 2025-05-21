@@ -1,0 +1,48 @@
+# IDE ve Editör Dosyaları
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+
+# Derleme Çıktıları
+target/
+out/
+bin/
+build/
+*.class
+
+# Log Dosyaları
+*.log
+logs/
+
+# Sistem Dosyaları
+.DS_Store
+Thumbs.db
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# Geçici Dosyalar
+*.tmp
+*.temp
+*.bak
+
+# Veritabanı Dosyaları
+*.db
+*.sqlite
+*.sqlite3
+
+# Kullanıcı Listesi (Güvenlik için)
+User_list.txt
+
+# Diğer
+*.jar
+!postgresql-42.2.23.jar 
