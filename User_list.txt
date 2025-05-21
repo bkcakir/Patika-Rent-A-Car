@@ -1,0 +1,31 @@
+# Patika Rent A Car - Kullanıcı Listesi
+
+## Admin Kullanıcıları
+admin1@rentacar.com - Admin123
+admin2@rentacar.com - Admin123
+
+## Normal Kullanıcılar
+ahmet.yilmaz@email.com - User123
+ayse.demir@email.com - User123
+mehmet.kaya@email.com - User123
+fatma.celik@email.com - User123
+ali.yildiz@email.com - User123
+zeynep.arslan@email.com - User123
+mustafa.ozturk@email.com - User123
+elif.kurt@email.com - User123
+burak.aydin@email.com - User123
+seda.sahin@email.com - User123
+
+## Kurumsal Kullanıcılar
+info@abc-ltd.com - User456
+rental@xyz-corp.com - User456
+fleet@global-transport.com - User456
+operations@mega-logistics.com - User456
+fleet@express-delivery.com - User456
+info@tech-solutions.com - User456
+fleet@logistics-pro.com - User456
+operations@transport-plus.com - User456
+fleet@delivery-express.com - User456
+info@corporate-rent.com - User456
+
+Not: Tüm şifreler SHA-256 algoritması ile şifrelenmiştir. 
