@@ -1,83 +1,20 @@
 # Patika Rent A Car
 
-Bu proje, Java 21 ve PostgreSQL kullanılarak geliştirilmiş bir araç kiralama uygulamasıdır.
+Bu proje, bir araç kiralama sisteminin konsol tabanlı uygulamasıdır.
 
-## Proje Özellikleri
+## Özellikler
 
-### Kullanıcı Yönetimi
-- Müşteriler ve sistem kullanıcıları email ve şifre ile giriş yapabilir
-- Şifreler SHA-256 algoritması ile güvenli bir şekilde şifrelenir
-- Sadece giriş yapmış kullanıcılar araç kiralayabilir
+- Kullanıcı yönetimi (kayıt, giriş, profil yönetimi)
+- Araç yönetimi (ekleme, silme, güncelleme, listeleme)
+- Kiralama işlemleri (araç kiralamak, iade etmek)
+- Admin paneli
+- Kullanıcı paneli
 
-### Araç Yönetimi
-- Araçlar ADMIN kullanıcısı tarafından sisteme eklenir
-- Desteklenen araç tipleri:
-  - SEDAN
-  - SUV
-  - HATCHBACK
-  - STATION WAGON
-  - SPOR
-- Araçlar kategorilere göre filtrelenebilir
-- Sayfalı liste görünümü
+## Gereksinimler
 
-### Kiralama Özellikleri
-- Kiralama süreleri:
-  - Saatlik
-  - Günlük
-  - Haftalık
-  - Aylık
-- Kurumsal kullanıcılar minimum 1 aylık kiralama yapabilir
-- 2 Milyon TL üzeri araçlar için:
-  - 30 yaş üstü kullanıcılar kiralayabilir
-  - Araç bedelinin %10'u kadar depozito gerekir
-- Her araç sınıfı için farklı kiralama ücretleri
-
-### Teknik Özellikler
-- Katmanlı mimari (DAO, Service, Model, Main)
-- Exception handling
-- Transaction yönetimi
-- İlişkisel veritabanı (PostgreSQL)
-- Terminal tabanlı menülü sistem
-
-## Teknoloji Yığını
-- Java 21
-- PostgreSQL
-
-## Veritabanı Yapılandırması
-
-### PostgreSQL Bağlantı Bilgileri
-```properties
-URL: jdbc:postgresql://localhost:3439/rent_a_car
-Kullanıcı Adı: Admin
-Şifre: Admin123*!!
-```
-
-> **ÖNEMLİ NOT:** Veritabanı bağlantı bilgilerini kendi PostgreSQL kurulumunuza göre değiştirmeniz gerekmektedir. Bu bilgiler sadece örnek olarak verilmiştir. Güvenlik için kendi kullanıcı adı ve şifrenizi kullanın.
-
-### Veritabanı Kurulumu
-1. PostgreSQL'i yükleyin
-2. 3439 portunda çalışan bir PostgreSQL sunucusu oluşturun
-3. `rent_a_car` adında bir veritabanı oluşturun
-4. `Db/create_tables.sql` dosyasını çalıştırarak tabloları oluşturun
-
-### Veritabanı Yedekleme ve Geri Yükleme
-- Veritabanı yedek dosyası: `Db/PatikaRentAcarDb`
-- Yedek dosyasını geri yüklemek için:
-  1. DBeaver'da veritabanınıza sağ tıklayın
-  2. "Restore" seçeneğini seçin
-  3. `Db/PatikaRentAcarDb` dosyasını seçin
-  4. "Start" butonuna tıklayarak geri yüklemeyi başlatın
-
-## Proje Yapısı
-```
-├── Main/           # Ana uygulama sınıfları
-├── Model/          # Veri modelleri
-├── Service/        # İş mantığı katmanı
-├── Daos/           # Veri erişim katmanı
-├── Db/             # Veritabanı bağlantı ve yapılandırma
-├── Helper/         # Yardımcı sınıflar
-└── resources/      # Kaynak dosyaları
-```
+- Java 17 veya üzeri
+- Maven
+- PostgreSQL 12 veya üzeri
 
 ## Kurulum
 
@@ -115,3 +52,19 @@ Kullanıcı Adı: Admin
 - Tüm şifreler SHA-256 algoritması ile şifrelenir
 - Kullanıcı yetkilendirmesi rol tabanlıdır
 - Hassas veriler güvenli bir şekilde saklanır
+
+## Proje Yapısı
+
+```
+src/main/java/
+├── Main/           # Ana uygulama sınıfları
+├── Model/          # Veri modelleri
+├── Service/        # İş mantığı katmanı
+├── Daos/           # Veritabanı erişim katmanı
+├── Db/             # Veritabanı bağlantı ve yardımcı sınıflar
+└── Helper/         # Yardımcı sınıflar
+```
+
+## Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
